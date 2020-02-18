@@ -1,0 +1,38 @@
+﻿@model Li_Raymond_HW3.Models.CateringOrder
+
+<h2>Checkout Catering</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel-body">
+            <form asp-action="CateringTotals" method="post">
+                <div class="form-group">
+                    <label asp-for="NumberOfTacos" class="control-label"></label>
+                    <input class="form-control input-validation-error" type="number" name="NumberOfTacos"/>
+                    <span asp-validation-for="NumberOfTacos" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="NumberOfSandwiches" class="control-label"></label>
+                    <input type="number" name="NumberOfSandwiches" class="form-control" />
+                    <span asp-validation-for="NumberOfSandwiches" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CustomerCode" class="control-label"></label>
+                    <input type="text" name="CustomerCode" class="form-control" />
+                    <span asp-validation-for="CustomerCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DeliveryFee" class="control-label"></label>
+                    <input type="number" name="DeliveryFee" class="form-control" />
+                    <span asp-validation-for="DeliveryFee" class="text-danger"></span>
+                </div>
+                <button type="Submit" class="btn btn-info">Submit</button>
+                <br />
+                <br />
+                <div>
+                    <a asp-action="Index">Back to Home Page</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
