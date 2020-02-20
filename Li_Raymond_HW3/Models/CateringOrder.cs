@@ -10,8 +10,10 @@ namespace Li_Raymond_HW3.Models
     {
         [Required(ErrorMessage = "Customer Code is Required")]
         [RegularExpression("([A-Za-z]){2,4}", ErrorMessage = "Customer code must be 2-4 characters.")] 
+        [Display(Name= "Customer Code:")]
         public String CustomerCode { get; set; }
         [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name= "Delivery Fee:")]
         public Decimal DeliveryFee { get; set; }
         public Boolean PreferredCustomer { get; set; }
         public void CalcTotals(Decimal decDeliveryFee)

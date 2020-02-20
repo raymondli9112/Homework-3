@@ -1,5 +1,81 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model CateringOrder
 @{
+    ViewData["Title"] = "CateringTotals";
 }
+<h1>Catering Order Totals</h1>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CustomerCode)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CustomerCode)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CustomerType)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CustomerType)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.PreferredCustomer)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.PreferredCustomer)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.NumberOfTacos)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.NumberOfTacos)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.NumberOfSandwiches)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.NumberOfSandwiches)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.TotalItems)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.TotalItems)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.TacoSubtotal)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.TacoSubtotal)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.SandwichSubtotal)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.SandwichSubtotal)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Subtotal)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Subtotal)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.DeliveryFee)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.DeliveryFee)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Start a New Order</a>
+</div>
+
+

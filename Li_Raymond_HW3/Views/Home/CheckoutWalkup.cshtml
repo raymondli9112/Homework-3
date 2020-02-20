@@ -1,32 +1,35 @@
-﻿@model Li_Raymond_HW3.Models.WalkupOrder
+﻿@model WalkupOrder
+@{
+    ViewData["Title"] = "Checkout Walkup";
+}
 <h2>Checkout Walkup</h2>
 <h4>Enter Order Information:</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <div class="panel-body">
-        <form asp-action="WalkupTotals" method="get">
-            <div class="form-group">
-                <label asp-for="CustomerName" class="control-label"></label>
-                <input type="text" name="CustomerName" class="form-control" />
-            </div>
-            <div class="form-group">
-                <label asp-for="NumberOfTacos" class="control-label"></label>
-                <input type="number" name="NumberOfTacos" class="form-control" />
-                <span asp-validation-for="NumberOfTacos" class="text-danger" >Number of tacos must be between 0 and 5000!</span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NumberOfSandwiches" class="control-label"></label>
-                <input type="number" name="NumberOfSandwiches" class="form-control" />
-                <span asp-validation-for="NumberOfSandwiches" class="text-danger">Number of sandwiches must be between 0 and 5000!</span>
-            </div>
-            <button type="Submit" class="btn btn-info">Submit</button>
-            <br />
-            <br />
-            <div>
-                <a asp-action="Index">Back to Home Page</a>
-            </div>
-        </form>
+            <form asp-action="WalkupTotals" method="get">
+                <div class="form-group">
+                    <label asp-for="CustomerName" class="control-label"></label>
+                    <input type="text" asp-for="CustomerName" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="NumberOfTacos" class="control-label"></label>
+                    <input type="number" asp-for="NumberOfTacos" class="form-control" />
+                    <span asp-validation-for="NumberOfTacos" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="NumberOfSandwiches" class="control-label"></label>
+                    <input type="number" asp-for="NumberOfSandwiches" class="form-control" />
+                    <span asp-validation-for="NumberOfSandwiches" class="text-danger"></span>
+                </div>
+                <button type="Submit" class="btn btn-info">Submit</button>
+                <br />
+                <br />
+                <div>
+                    <a asp-action="Index">Back to Home Page</a>
+                </div>
+            </form>
         </div>
     </div>
 </div>

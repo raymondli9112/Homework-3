@@ -19,10 +19,12 @@ namespace Li_Raymond_HW3.Models
         [Display(Name = "Customer Type:")]
         public CustomerType CustomerType { get; set; }
         [Range(minimum:0, maximum: MAX_ITEMS)]
+        [RegularExpression("([0-9]|[1-8][0-9]|9[0-9]|[1-8][0-9]{2}|9[0-8][0-9]|99[0-9]|[1-4][0-9]{3}|5000)", ErrorMessage = "Number of sandwiches must be between 0 and 5000!")]
         [Display(Name = "Number of Sandwiches:")]
         public Int32 NumberOfSandwiches { get; set; }
         [Range(minimum:0, maximum: MAX_ITEMS)]
-        [Display(Name = "Number of Tacos:")]
+        [RegularExpression("([0-9]|[1-8][0-9]|9[0-9]|[1-8][0-9]{2}|9[0-8][0-9]|99[0-9]|[1-4][0-9]{3}|5000)", ErrorMessage = "Number of tacos must be between 0 and 5000!")]
+        [Display(Name = "Number of Tacos:")]      
         public Int32 NumberOfTacos { get; set; }
         [DisplayFormat(DataFormatString = "{0:c}")]
         [Display(Name = "Sandwich Subtotal:")]
